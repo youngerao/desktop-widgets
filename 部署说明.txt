@@ -1,0 +1,30 @@
+桌面组件官网 · 部署说明
+
+这是一个纯静态站点，不需要数据库、不需要后端。
+
+目录结构：
+  index.html
+  assets/            样式、脚本、截图、品牌 logo
+  downloads/         客户端安装包
+
+本地预览：
+  在 site 目录运行：
+    python -m http.server 8080
+  浏览器打开：
+    http://127.0.0.1:8080/
+
+正式上线：
+  1. 把整个 site 目录里的内容上传到支持约 70MB 单文件的静态托管（Nginx、宝塔、GitHub Pages、Netlify、OSS/CDN 均可；免费套餐请先确认单文件大小限制）。
+  2. 保持 downloads/ 下文件的相对路径不变。
+  3. 绑定域名后，首页的“下载安装版”按钮即可直接下载 .exe 安装程序。
+  4. 如果使用 GitHub Pages，把 site 目录内容放到仓库根目录或 gh-pages 分支即可。
+
+更新版本：
+  - 替换 downloads/ 下的安装包和便携版；
+  - 同步修改 index.html 中的版本号、大小、SHA-256；
+  - 建议保留旧版本文件，避免旧链接失效。
+
+当前版本（第一代）：
+  安装版：desktop-widgets-setup-v1.0.exe
+  大小：66,006,528 字节（62.9 MB）
+  SHA-256：7ffe5e4efc03b6978cad04116206cd762d23d1a37fa3fd30dd7ecad0d183d8ae
